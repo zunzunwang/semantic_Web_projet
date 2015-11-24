@@ -1,0 +1,32 @@
+package semweb;
+
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.RDFNode;
+
+public class PersonDataImpl implements PersonData {
+
+	@Override
+	public String name(RDFNode person, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String birth(RDFNode person, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String death(RDFNode person, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String picture(RDFNode person, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

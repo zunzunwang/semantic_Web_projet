@@ -1,0 +1,30 @@
+package semweb;
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String test = '  <div class="foaf-person vcard" about="http://www.emse.fr/~zimmermann/Teaching/SemWeb/w3cstaff.html#cbaron">
+        <div class="person-info">
+                <img rel="http://xmlns.com/foaf/0.1/img" src="http://www.w3.org/2006/05/u/1ymh4z8jnqys-sm.jpg" alt="Photo of Caroline Baron" class="photo foaf-depiction" height="120" width="90" />
+                <h4>
+            <span class="fn foaf-name">
+              <span property="http://xmlns.com/foaf/0.1/firstName" class="foaf-given">Caroline</span> 
+              <span property="http://xmlns.com/foaf/0.1/lastName" class="foaf-given">Baron</span>
+            </span> 
+            <span class="profession">Finance and Administrative manager</span>      </h4>
+                <p><span class="icon-placeholder">www</span><a property="http://xmlns.com/foaf/0.1/homePage" href="http://www.w3.org/People/cbaron">Personal page</a></p>
+                <p><span class="icon-placeholder">e-mail</span><a property="http://xmlns.com/foaf/0.1/mbox" href="mailto:cbaron@w3.org">cbaron@w3.org</a></p>
+        </div>        
+            <div class="person-bio">
+          <a href="http://www.w3.org/People/cbaron">Caroline</a> is W3C Europe administrative and finance manager at ERCIM.<br />
+    She joined the team in December 2001 and is now in charge of finance, accounting and human resources.<br />
+    Caroline holds a BA in foreign applied languages and an MBA from the <a href="http://portail.unice.fr/jahia/Jahia/">University of Nice <span rel="http://xmlns.com/foaf/0.1/basedNear" resource="http://dbpedia.org/resource/Sophia_Antipolis">Sophia Antipolis</span></a>.
+        </div>   
+          </div>'
+				
+				
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package semweb;
+
+import org.semarglproject.jena.rdf.rdfa.JenaRdfaReader;
+
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.RDFNode;
+
+public class Main_Navigating_the_model {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JenaRdfaReader.inject();
+		Model m = null;
+		String url = null;
+		RDFNode r;				
+		try {
+			m = ModelFactory.createDefaultModel();
+			m.read(url,"TTL");			
+		} catch ( org.apache.jena.riot.RiotException e) {
+			// TODO Auto-generated catch block			
+			try {
+				m = ModelFactory.createDefaultModel();
+				m.read(url,"RDF/XML");				
+				} catch ( org.apache.jena.riot.RiotException a) {
+					// TODO Auto-generated catch block
+					try {
+						m = ModelFactory.createDefaultModel();
+						m.read(url,"RDFA");	
+						} catch ( org.apache.jena.riot.RiotException c) {
+							c.printStackTrace();							
+						}
+					}
+			}finally{
+//				m.write(System.out);
+			}
+
+
+	}
+
+}

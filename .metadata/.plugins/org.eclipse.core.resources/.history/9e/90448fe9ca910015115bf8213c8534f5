@@ -1,0 +1,14 @@
+package semweb;
+
+import com.hp.hpl.jena.rdf.model.RDFNode;
+
+public class PersonExtractor extends  RDFExtractor  {
+
+	@Override
+	public RDFNode primaryTopic(String iri) {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+
+}

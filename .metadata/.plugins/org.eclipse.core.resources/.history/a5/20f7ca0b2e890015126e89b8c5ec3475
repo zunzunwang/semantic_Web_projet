@@ -1,0 +1,20 @@
+package semweb;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+import org.semarglproject.jena.rdf.rdfa.JenaRdfaReader;
+
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String url="http://www.emse.fr/~zimmermann/Teaching/SemWeb/w3cstaff.html#shadi";
+		}
+
+}
+
+	

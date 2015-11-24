@@ -1,0 +1,87 @@
+package semweb;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
+
+import org.semarglproject.jena.rdf.rdfa.JenaRdfaReader;
+
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.ResIterator;
+import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.vocabulary.RDF;
+
+public class ClassifierImpl  implements Classifier  {
+
+	protected ClassifierImpl() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Collection<String> retrieveTypes(String iri) {
+		// TODO Auto-generated method stub
+		JenaRdfaReader.inject();
+		Model m = null;
+		ArrayList <Resource> array_resource = new ArrayList <Resource>()  ; 
+//		String rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+//		m.setNsPrefix("rdf", rdf);		
+		
+		try {
+			m = ModelFactory.createDefaultModel();
+			m.read(iri,"TTL");			
+		} catch ( org.apache.jena.riot.RiotException e) {
+			// TODO Auto-generated catch block			
+			try {
+				m = ModelFactory.createDefaultModel();
+				m.read(iri,"RDF/XML");				
+				} catch ( org.apache.jena.riot.RiotException a) {
+					// TODO Auto-generated catch block
+					try {
+						m = ModelFactory.createDefaultModel();
+						m.read(iri,"RDFA");	
+						} catch ( org.apache.jena.riot.RiotException c) {
+							c.printStackTrace();							
+						}
+					}
+			}finally{
+				m.write(System.out);
+			}
+					
+		ResIterator iter = m.listResourcesWithProperty(RDF.type);
+		if (iter.hasNext()) {
+			System.out.println("The model contains those rdf:type :");
+			int nb=0;
+			 while (iter.hasNext()) {
+				 System.out.println("  " + iter.nextResource().getPropertyResourceValue(RDF.type));
+			 }
+			 System.out.println(" nombre de scientist:"+nb);
+		}else {
+            System.out.println("No rdf:type were found in the model");
+        } 
+		
+		Map<String, String> prefixMap = m.getNsPrefixMap();
+		System.out.println(prefixMap.values());
+		 
+
+		return null;
+	}
+
+	public Collection<String> retrieveSuperClasses(String iri) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Collection<String> getAllTypes(String url) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean isOfType(String entityIRI, String classIRI) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

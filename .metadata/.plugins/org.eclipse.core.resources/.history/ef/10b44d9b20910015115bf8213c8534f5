@@ -1,0 +1,36 @@
+package semweb;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.rmi.RemoteException;
+
+import org.semarglproject.jena.rdf.rdfa.JenaRdfaReader;
+
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String url="http://www.emse.fr/~zimmermann/Teaching/SemWeb/w3cstaff.html#shadi";
+//		String url= "http://www.emse.fr/~zimmermann/Teaching/SemWeb/person.ttl#me";
+		String url2 ="http://www.emse.fr/~zimmermann/Teaching/SemWeb/vocab.ttl#me";
+		String url3 ="http://xmlns.com/foaf/0.1/Person";
+		ClassifierImpl a;
+		try {
+			a = new ClassifierImpl();
+//			a.retrieveTypes(url);
+//			a.retrieveSuperClasses(url);
+//			a.getAllTypes(url);
+			
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		}
+
+}
+
+	

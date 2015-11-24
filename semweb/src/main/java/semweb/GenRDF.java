@@ -35,7 +35,7 @@ public class GenRDF {
 		m.setNsPrefix("xsd", xsd);
 		m.setNsPrefix("v", v);
 		
-		
+		//subject property resource
 		Resource spatialThing = m.createResource(geo + "SpatialThing");
 		Resource r;
 

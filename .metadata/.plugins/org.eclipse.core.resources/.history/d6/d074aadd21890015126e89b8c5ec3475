@@ -1,0 +1,21 @@
+package semweb;
+
+import org.semarglproject.jena.rdf.rdfa.JenaRdfaReader;
+
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JenaRdfaReader.inject();
+		Model m = ModelFactory.createDefaultModel();
+		String url="http://www.emse.fr/~zimmermann/Teaching/";
+		m.read(url);
+		m.write(System.out);
+		
+
+	}
+
+}

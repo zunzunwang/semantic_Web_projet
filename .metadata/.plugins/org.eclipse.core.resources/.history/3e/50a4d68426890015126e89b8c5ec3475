@@ -1,0 +1,45 @@
+package semweb;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+import org.semarglproject.jena.rdf.rdfa.JenaRdfaReader;
+
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JenaRdfaReader.inject();
+		Model m = ModelFactory.createDefaultModel();
+		String url="http://www.emse.fr/~zimmermann/Teaching/SemWeb/w3cstaff.html#shadi";
+		try {
+			m.read(url,"TTL");
+			m.write(System.out);
+			System.out.println("1");
+		} catch ( org.apache.jena.riot.RiotException e) {
+			// TODO Auto-generated catch block
+			
+//			try {
+				m.read(url,"RDF/XML");
+				m.write(System.out);
+				System.out.println("2");
+//				} catch ( org.apache.jena.riot.RiotException a) {
+					// TODO Auto-generated catch block
+//					try {
+//						m.read(url,"RDFA");
+//						m.write(System.out);
+//						System.out.println("3");
+//						} catch ( org.apache.jena.riot.RiotException c) {
+//							c.printStackTrace();
+							
+						}
+					}
+//			}
+			
+//		}
+	}
+//}
+	
