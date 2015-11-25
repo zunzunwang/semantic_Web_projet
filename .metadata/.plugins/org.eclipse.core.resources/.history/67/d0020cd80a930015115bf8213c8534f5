@@ -42,7 +42,7 @@ public class GenerationXHTML {
 					+ "<img property=\"image\" src=\""+persponExtrator.getimage()+"\" height=400>\r"
 					+ "</div>\r"
 					+ "<div>\r"
-					+ "Name:<span property=\"name\">"+persponExtrator.getname()+"</span> \r"
+					+ "Name:     <span property=\"name\">"+persponExtrator.getname()+"</span> \r"
 					+ "</div>\r"
 					+ "<div>\r"
 					+ "Birthday: <span property=\"birthDate\">"+persponExtrator.getbirthday()+"</span>\r"
