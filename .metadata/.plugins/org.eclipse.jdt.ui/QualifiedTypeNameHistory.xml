@@ -2,4 +2,16 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.rmi.server.UnicastRemoteObject"/>
 <fullyQualifiedTypeName name="java.rmi.RemoteException"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.rdf.model.Resource"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.rdf.model.StmtIterator"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.rdf.model.Selector"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.rdf.model.SimpleSelector"/>
+<fullyQualifiedTypeName name="semweb.ClassifierImpl"/>
+<fullyQualifiedTypeName name="javax.security.auth.Subject"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.rdf.model.Property"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.vocabulary.RDFS"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>
